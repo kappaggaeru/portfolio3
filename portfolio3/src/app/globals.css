@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+    --background: #ffffff;
+    --foreground: #171717;
+    --color-gray-background: oklch(99.1% 0 0);
+}
+
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+}
+
+body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+.bg-gray-background {
+    background-color: var(--color-gray-background);
+}
+
+@layer base {
+    :root {
+        /* sRGB hex */
+        --color-gray-100: #fcfcfc;
+        --color-gray-200: #fafafa;
+        --color-gray-300: #f4f4f4;
+
+        @supports (color: oklch(0 0 0)) {
+            /* OKLCH */
+            --color-gray-100: oklch(0.991 0 0);
+            --color-gray-200: oklch(0.982 0 0);
+            --color-gray-300: oklch(0.955 0 0);
+        }
+    }
+}
