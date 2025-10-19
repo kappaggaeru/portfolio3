@@ -5,26 +5,19 @@ export default function Experience() {
             logo: "images/edsa-logo.jfif",
             role: "Frontend Developer",
             from: "Ago 2021",
-            to: "Oct 2025",
-            location: "Tandil, BA (remote)"
-        },
-        {
-            company: "ACME",
-            logo: "",
-            role: "Designer",
-            from: "Nov 2025",
             to: "Present",
-            location: "Buenos Aires"
-        },
+            location: "Tandil, BA (remote)"
+        }
     ];
 
     const rows = experiences.map((e, index) => (
-        <div key={index} className="flex flex-row gap-1 justify-between">
-            <div className="flex flex-row gap-3 items-center">
-                <div className="flex items-center border-1 border-gray-300 rounded-lg size-12 overflow-hidden">
+        <div key={index} className="flex flex-row justify-between gap-3">
+            <div className="flex flex-row gap-3">
+                <div className="flex items-center border-1 border-gray-300 size-12 min-w-12 rounded-lg">
                     {e.logo && (
-                        <img src={e.logo} alt={e.company} className="" />
-                    )}
+                        <img src={e.logo} alt={e.company} className="w-full rounded-lg" />
+                    )
+                    }
                 </div>
                 <div className="grid gap-1">
                     <span className="bold">{e.company}</span>

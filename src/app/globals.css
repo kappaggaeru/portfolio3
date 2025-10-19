@@ -46,6 +46,10 @@ body {
     color: var(--color-gray-1200);
 }
 
+.bg-gray-1200 {
+    background-color: var(--color-gray-1200);
+}
+
 @layer base {
     :root {
         /* sRGB hex */
