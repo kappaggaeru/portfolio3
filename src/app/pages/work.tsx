@@ -17,13 +17,11 @@ export default function Work() {
                     text="Writing"
                     onClick={() => setActiveWork(1)}
                     isActive={activeWork == 1}
-                    icon="file"
                 />
                 <Button
                     text="Components"
                     onClick={() => setActiveWork(2)}
                     isActive={activeWork == 2}
-                    icon="diamond"
                 />
             </div>
         </div>

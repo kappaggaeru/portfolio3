@@ -1,3 +1,4 @@
+"use client"
 import Anchor from "../components/anchor";
 
 export default function WelcomePage() {

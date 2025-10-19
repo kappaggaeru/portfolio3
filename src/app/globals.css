@@ -4,22 +4,25 @@
 :root {
     --background: #ffffff;
     --foreground: #171717;
-    --color-gray-background: oklch(99.1% 0 0);
 
     @supports (color: oklch(0 0 0)) {
         /* OKLCH */
-        --color-gray-100: oklch(0.549 0 0);
-        --color-gray-200: oklch(0.586 0 0);
-        --color-gray-300: oklch(0.955 0 0);
-        --color-gray-400: oklch(0.931 0 0);
-        --color-gray-500: oklch(0.695 0 0);
-        --color-gray-600: oklch(0.731 0 0);
-        --color-gray-700: oklch(0.768 0 0);
-        --color-gray-800: oklch(0.804 0 0);
-        --color-gray-900: oklch(0.841 0 0);
-        --color-gray-1000: oklch(0.877 0 0);
-        --color-gray-1100: oklch(0.503 0 0);
-        --color-gray-1200: oklch(0.244 0 0);
+        -color-gray-background: oklch(99.1% 0 0);
+        --color-gray-100: oklch(99.1% 0 0);
+        --color-gray-200: oklch(98.2% 0 0);
+        --color-gray-300: oklch(95.5% 0 0);
+        --color-gray-400: oklch(93.1% 0 0);
+        --color-gray-500: oklch(90.7% 0 0);
+        --color-gray-600: oklch(88.5% 0 0);
+        --color-gray-700: oklch(85.1% 0 0);
+        --color-gray-800: oklch(79.2% 0 0);
+        --color-gray-900: oklch(64.3% 0 0);
+        --color-gray-1000: oklch(61% 0 0);
+        --color-gray-1100: oklch(50.3% 0 0);
+        --color-gray-1200: oklch(24.4% 0 0);
+        --color-paragraph: oklch(38.7% 0 0);
+        --color-preview-bg: oklch(100% 0 0);
+        --color-preview-border: oklch(93.1% 0 0);
     }
 
     --tw-inset-shadow {
@@ -68,10 +71,12 @@
             /* OKLCH */
             --color-gray-background: oklch(17.8% 0 0);
             --color-gray-100: oklch(0.178 0 0);
+            --color-gray-200: oklch(0.213 0 0);
             --color-gray-300: oklch(0.252 0 0);
             --color-gray-400: oklch(0.285 0 0);
             --color-gray-1100: oklch(0.773 0 0);
             --color-gray-1200: oklch(0.950 0 0);
+            --color-preview-border: oklch(23.9% 0 0);
         }
     }
 }
@@ -103,6 +108,6 @@ body {
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
 }
 
-@layer base {
-    :root {}
+.border-preview-border {
+    border-color: var(--color-preview-border);
 }
