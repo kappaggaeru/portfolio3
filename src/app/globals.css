@@ -16,7 +16,15 @@
     :root {
         --background: #0a0a0a;
         --foreground: #ededed;
-        --color-gray-background: oklch(17.8% 0 0);
+        
+        @supports (color: oklch(0 0 0)) {
+            /* OKLCH */
+            --color-gray-background: oklch(17.8% 0 0);
+            --color-gray-100: oklch(0.178 0 0);
+            --color-gray-300: oklch(0.252 0 0);
+            --color-gray-400: oklch(0.285 0 0);
+            --color-gray-1100: oklch(0.773 0 0);
+        }
     }
 }
 
@@ -28,6 +36,10 @@ body {
 
 .bg-gray-background {
     background-color: var(--color-gray-background);
+}
+
+.text-gray-1100 {
+    color: var(--color-gray-1100);
 }
 
 .text-gray-1200 {

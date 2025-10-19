@@ -21,9 +21,9 @@ export default function Experience() {
     const rows = experiences.map((e, index) => (
         <div key={index} className="flex flex-row gap-1 justify-between">
             <div className="flex flex-row gap-3 items-center">
-                <div className="border-1 border-gray-300 rounded-lg p-2 size-12">
+                <div className="flex items-center border-1 border-gray-300 rounded-lg size-12 overflow-hidden">
                     {e.logo && (
-                        <img src={e.logo} alt={e.company} className="w-full" />
+                        <img src={e.logo} alt={e.company} className="" />
                     )}
                 </div>
                 <div className="grid gap-1">
@@ -32,7 +32,7 @@ export default function Experience() {
                 </div>
             </div>
             <div className="grid gap-1">
-                <span className="text-end bold">{e.from} - {e.to}</span>
+                <span className="text-end bold text-nowrap">{e.from} - {e.to}</span>
                 <span className="text-end text-gray-500 text-sm">{e.location}</span>
             </div>
         </div>

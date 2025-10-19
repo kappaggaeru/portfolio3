@@ -16,10 +16,10 @@ export default function Projects() {
 
     const rows = projects.map((p, index) => (
         <div key={index} className="border-1 border-gray-300 rounded-lg p-1">
-            <div className="border-1 border-gray-300 rounded-lg bg-gray-200 h-24"></div>
+            <div className="border-1 border-gray-300 rounded-lg bg-gray-100 h-24"></div>
             <div className="grid p-2">
-                <span>{p.title}</span>
-                <span className="text-sm text-gray-400">{p.desc}</span>
+                <span className="text-gray-1200">{p.title}</span>
+                <span className="text-gray-1100">{p.desc}</span>
             </div>
         </div>
     ));
