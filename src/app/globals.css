@@ -16,6 +16,7 @@
     :root {
         --background: #0a0a0a;
         --foreground: #ededed;
+        --color-gray-background: oklch(17.8% 0 0);
     }
 }
 
@@ -29,6 +30,10 @@ body {
     background-color: var(--color-gray-background);
 }
 
+.text-gray-1200 {
+    color: var(--color-gray-1200);
+}
+
 @layer base {
     :root {
         /* sRGB hex */
@@ -38,9 +43,18 @@ body {
 
         @supports (color: oklch(0 0 0)) {
             /* OKLCH */
-            --color-gray-100: oklch(0.991 0 0);
-            --color-gray-200: oklch(0.982 0 0);
-            --color-gray-300: oklch(0.955 0 0);
+            --color-gray-100: oklch(0.549 0.000 0.0);
+            --color-gray-200: oklch(0.586 0.000 0.0);
+            --color-gray-300: oklch(0.622 0.000 0.0);
+            --color-gray-400: oklch(0.658 0.000 0.0);
+            --color-gray-500: oklch(0.695 0.000 0.0);
+            --color-gray-600: oklch(0.731 0.000 0.0);
+            --color-gray-700: oklch(0.768 0.000 0.0);
+            --color-gray-800: oklch(0.804 0.000 0.0);
+            --color-gray-900: oklch(0.841 0.000 0.0);
+            --color-gray-1000: oklch(0.877 0.000 0.0);
+            --color-gray-1100: oklch(0.914 0.000 0.0);
+            --color-gray-1200: oklch(0.950 0.000 0.0);
         }
     }
 }
