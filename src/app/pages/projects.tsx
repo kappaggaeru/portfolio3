@@ -15,7 +15,7 @@ export default function Projects() {
     ]
 
     const rows = projects.map((p, index) => (
-        <div key={index} className="border-1 border-gray-300 rounded-xl p-1">
+        <div key={index} className="border-1 border-gray-300 shacustom-shadow rounded-xl p-1">
             <div className="border-1 border-gray-300 rounded-lg bg-gray-100 h-24"></div>
             <div className="grid p-2">
                 <span className="text-gray-1200">{p.title}</span>

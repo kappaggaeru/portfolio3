@@ -4,9 +4,9 @@ export default function Experience() {
             company: "EDSA",
             logo: "images/edsa-logo.jfif",
             role: "Frontend Developer",
-            from: "Ago 2021",
+            from: "Jul 2021",
             to: "Present",
-            location: "Tandil, BA (remote)"
+            location: "Tandil, Buenos Aires"
         }
     ];
 

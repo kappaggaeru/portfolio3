@@ -5,6 +5,52 @@
     --background: #ffffff;
     --foreground: #171717;
     --color-gray-background: oklch(99.1% 0 0);
+
+    @supports (color: oklch(0 0 0)) {
+        /* OKLCH */
+        --color-gray-100: oklch(0.549 0 0);
+        --color-gray-200: oklch(0.586 0 0);
+        --color-gray-300: oklch(0.955 0 0);
+        --color-gray-400: oklch(0.931 0 0);
+        --color-gray-500: oklch(0.695 0 0);
+        --color-gray-600: oklch(0.731 0 0);
+        --color-gray-700: oklch(0.768 0 0);
+        --color-gray-800: oklch(0.804 0 0);
+        --color-gray-900: oklch(0.841 0 0);
+        --color-gray-1000: oklch(0.877 0 0);
+        --color-gray-1100: oklch(0.503 0 0);
+        --color-gray-1200: oklch(0.244 0 0);
+    }
+
+    --tw-inset-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+    }
+
+    --tw-inset-ring-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+    }
+
+    --tw-ring-offset-color {
+        syntax: "*";
+        inherits: false;
+        initial-value: #fff;
+    }
+
+    --tw-ring-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+    }
+
+    --tw-shadow {
+        syntax: "*";
+        inherits: false;
+        initial-value: 0 0 #0000;
+    }
 }
 
 @theme inline {
@@ -12,11 +58,12 @@
     --color-foreground: var(--foreground);
 }
 
+/* dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
         --foreground: #ededed;
-        
+
         @supports (color: oklch(0 0 0)) {
             /* OKLCH */
             --color-gray-background: oklch(17.8% 0 0);
@@ -24,6 +71,7 @@
             --color-gray-300: oklch(0.252 0 0);
             --color-gray-400: oklch(0.285 0 0);
             --color-gray-1100: oklch(0.773 0 0);
+            --color-gray-1200: oklch(0.950 0 0);
         }
     }
 }
@@ -50,27 +98,11 @@ body {
     background-color: var(--color-gray-1200);
 }
 
-@layer base {
-    :root {
-        /* sRGB hex */
-        --color-gray-100: #fcfcfc;
-        --color-gray-200: #fafafa;
-        --color-gray-300: #f4f4f4;
+.shadow-custom,
+.shadow-lg {
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+}
 
-        @supports (color: oklch(0 0 0)) {
-            /* OKLCH */
-            --color-gray-100: oklch(0.549 0.000 0.0);
-            --color-gray-200: oklch(0.586 0.000 0.0);
-            --color-gray-300: oklch(0.622 0.000 0.0);
-            --color-gray-400: oklch(0.658 0.000 0.0);
-            --color-gray-500: oklch(0.695 0.000 0.0);
-            --color-gray-600: oklch(0.731 0.000 0.0);
-            --color-gray-700: oklch(0.768 0.000 0.0);
-            --color-gray-800: oklch(0.804 0.000 0.0);
-            --color-gray-900: oklch(0.841 0.000 0.0);
-            --color-gray-1000: oklch(0.877 0.000 0.0);
-            --color-gray-1100: oklch(0.914 0.000 0.0);
-            --color-gray-1200: oklch(0.950 0.000 0.0);
-        }
-    }
+@layer base {
+    :root {}
 }
