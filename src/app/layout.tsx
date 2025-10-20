@@ -23,7 +23,7 @@ export default function RootLayout({
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
             </head>
             <body
-                className={`${interSans.variable} antialiased`}
+                className={`${interSans.variable} antialiased bg-gray-background dark:bg-slate-800`}
             >
                 {children}
             </body>

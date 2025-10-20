@@ -1,23 +1,38 @@
+
 export default function Projects() {
+    const pokeballSvg = <svg
+        className="w-8 h-8"
+        viewBox="0 0 100 100"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <circle
+            cx="50"
+            cy="50"
+            r="48"
+            fill="#f0f0f0"
+            stroke="#d1d5db"
+            strokeWidth="4"
+            className="dark:stroke-gray-600"
+        />
+        <path d="M50 2 A48 48 0 0 1 98 50 H2 A48 48 0 0 1 50 2 Z" fill="#ef4444" />
+        <path d="M2 50 H98 A48 48 0 0 1 50 98 A48 48 0 0 1 2 50 Z" fill="white" />
+        <rect x="0" y="46" width="100" height="8" fill="black" />
+        <circle cx="50" cy="50" r="12" fill="white" stroke="black" strokeWidth="6" />
+    </svg>
     const projects = [
         {
             title: "Pokedex",
             desc: "Encyclopedia of Pokémon",
             year: "Jul 2025",
-            cover: ""
-        },
-        {
-            title: "Financy",
-            desc: "Expense tracker",
-            year: "Oct 2025",
-            cover: ""
+            cover: pokeballSvg,
+            link: "https://pokedex-one-beta-60.vercel.app/"
         },
     ]
 
     const rows = projects.map((p, index) => (
-        <a  key={index}
+        <a key={index}
             aria-label={p.title}
-            className="shadow-bg bg-preview-bg shadow-custom flex h-64 flex-col items-center justify-center rounded-xl p-1 transition-colors duration-200 ease-out hover:bg-gray-100 border border-gray-300 dark:shadow-none dark:hover:bg-gray-200" target="_blank" rel="noopener noreferrer" href="https://www.lessless.app/">
+            className="shadow-bg bg-preview-bg shadow-custom flex h-64 flex-col items-center justify-center rounded-xl p-1 transition-colors duration-200 ease-out hover:bg-gray-100 border border-gray-300 dark:shadow-none dark:hover:bg-gray-200" target="_blank" rel="noopener noreferrer" href={p.link !== "" ? p.link : ""}>
             <div
                 className="relative flex h-full w-full items-center justify-center gap-2 rounded-lg border border-gray-400 bg-gray-100 dark:border-gray-300">
                 <div className="absolute top-1/2 left-1/2 flex h-full translate-x-[-50%] translate-y-[-50%] gap-32">
@@ -29,6 +44,7 @@ export default function Projects() {
                     <span className="border-preview-border w-full border-b border-dashed"></span>
                 </div>
                 <div className="shadow-bg bg-preview-bg shadow-custom flex size-14 shrink-0 items-center justify-center rounded-xl dark:border dark:border-gray-300 dark:bg-gray-200 dark:shadow-none">
+                    {p.cover}
                 </div>
             </div>
             <div className="flex w-full flex-col items-start justify-center gap-0.5 p-2 font-medium">

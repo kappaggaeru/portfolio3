@@ -2,18 +2,26 @@ export default function Experience() {
     const experiences = [
         {
             company: "EDSA",
-            logo: "images/edsa-logo.jfif",
+            logo: "images/edsa-logo-negro.png",
             role: "Frontend Developer",
             from: "Jul 2021",
             to: "Present",
-            location: "Tandil, Buenos Aires"
+            location: "Tandil, Buenos Aires",
+            url: "https://www.edsa.com/"
         }
     ];
 
     const rows = experiences.map((e, index) => (
-        <div key={index} className="flex flex-row justify-between gap-3">
+        <a
+            key={index}
+            className="flex flex-row justify-between gap-3"
+            rel="noreferrer"
+            target="_blank"
+            href={e.url}
+            aria-label="EDSA"
+        >
             <div className="flex flex-row gap-3 items-center">
-                <div className="flex items-center border-1 border-gray-300 size-12 min-w-12 rounded-lg p-2">
+                <div className="hidden sm:flex items-center border-1 border-gray-300 size-12 min-w-12 rounded-lg p-2">
                     {e.logo && (
                         <img src={e.logo} alt={e.company} className="w-full rounded-lg" />
                     )
@@ -28,7 +36,7 @@ export default function Experience() {
                 <span className="text-end bold text-nowrap">{e.from} - {e.to}</span>
                 <span className="text-end text-gray-1100 text-sm">{e.location}</span>
             </div>
-        </div>
+        </a>
     ))
     return (
         <div className="mt-16">
