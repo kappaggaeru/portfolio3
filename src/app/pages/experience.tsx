@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 export default function Experience() {
     const experiences = [
         {
             company: "EDSA",
-            logo: "images/edsa-logo-negro.png",
+            logo: "/images/edsa-logo-negro.png",
             role: "Frontend Developer",
             from: "Jul 2021",
             to: "Present",
@@ -23,7 +25,13 @@ export default function Experience() {
             <div className="flex flex-row gap-3 items-center">
                 <div className="hidden sm:flex items-center border-1 border-gray-300 size-12 min-w-12 rounded-lg p-2">
                     {e.logo && (
-                        <img src={e.logo} alt={e.company} className="w-full rounded-lg" />
+                        <Image
+                            src={e.logo}
+                            alt={e.company}
+                            className="w-full rounded-lg"
+                            width={20}
+                            height={20}
+                        />
                     )
                     }
                 </div>
