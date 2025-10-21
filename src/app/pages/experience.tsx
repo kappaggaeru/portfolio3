@@ -23,7 +23,7 @@ export default function Experience() {
             aria-label="EDSA"
         >
             <div className="flex flex-row gap-3 items-center">
-                <div className="hidden sm:flex items-center border-1 border-gray-300 size-12 min-w-12 rounded-lg p-2">
+                <div className="hidden sm:flex items-center border-1 border-gray-300 size-12 min-w-12 rounded-lg p-2 bg-white">
                     {e.logo && (
                         <Image
                             src={e.logo}
